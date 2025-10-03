@@ -16,16 +16,7 @@ OLNet achieves an F1 score of **81.17** on **CULane** while running at **71 FPS*
 ---
 
 
----
 
-## Results on CULane
-- **F1**: 81.17  
-- **Speed**: 71 FPS (single GPU, 1920×1080 input; details below)  
-- Strong performance on scenarios with occlusion and low visibility.
-
-> Exact speed depends on GPU, input size, and I/O. Reported FPS measured on an NVIDIA-class GPU with mixed precision enabled.
-
----
 
 ## Getting Started
 
