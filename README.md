@@ -45,43 +45,10 @@ SLA requires SAM and LaMa:
 - LaMa inpainting: https://github.com/advimman/lama
 
 We provide a script to generate occlusion/missing-mark variants:
-```bash
-# Example: generate SLA-augmented training set
-python tools/generate_sla.py \
-  --input data/CULane \
-  --output data/CULane_SLA \
-  --sam-checkpoint checkpoints/sam_vit_h.pth \
-  --lama-config third_party/lama/configs/prediction/default.yaml \
-  --lama-checkpoint checkpoints/big-lama.pt \
-  --occlude-prob 0.4 \
-  --erase-prob 0.3 \
-  --shadow-prob 0.3 \
-  --max-objects 5
-```
-- `--occlude-prob`: paste SAM masks as occluders
-- `--erase-prob`: LaMa removes lane fragments to simulate wear/missing
-- `--shadow-prob`: optional synthetic shadow overlay
-- The script writes images and masks with the same naming pattern under `data/CULane_SLA`.
 
-Update your config to use `CULane_SLA` for training.
 
 ---
 
-## Training
-We provide a default config for CULane:
-```bash
-# Single GPU
-python tools/train.py --config configs/olnet_culane.py
-
-
-
-## Evaluation
-```bash
-python tools/eval.py \
-  --config configs/olnet_culane.py \
-  --checkpoint checkpoints/olnet_culane_f1_81p17.pth \
-
-```
 
 
 
