@@ -1,7 +1,7 @@
 # V-LaneNet
 
 
-OLNet achieves an F1 score of **81.17** on **CULane** while running at **71 FPS**, offering a practical solution for robust lane detection in the wild.
+V-LaneNet achieves an F1 score of **81.17** on **CULane** while running at **71 FPS**, offering a practical solution for robust lane detection in the wild.
 
 
 ---
@@ -71,38 +71,18 @@ Update your config to use `CULane_SLA` for training.
 We provide a default config for CULane:
 ```bash
 # Single GPU
-python tools/train.py --config configs/olnet_culane.yaml
+python tools/train.py --config configs/olnet_culane.py
 
-# Multi-GPU (DDP)
-torchrun --nproc_per_node 8 tools/train.py --config configs/olnet_culane.yaml
 
-# Common options
-#   --amp                # enable mixed precision
-#   --seed 42            # reproducibility
-#   --resume checkpoint.pth
-```
-
-Key config fields (see `configs/olnet_culane.yaml`):
-- `model.backbone`: e.g., `resnet50` or `convnext_tiny` (frozen if desired)
-- `model.mdfpn.ddfcm`: enable Dual-Domain Fourier Contextual Mixer
-- `loss.lo_iou.lambda`: direction weight \(\lambda\) (default 0.5)
-- `data.train.root`: set to `data/CULane_SLA` to include SLA
-- `train.img_size`: e.g., 360×640 or 720p/1080p
-- `optim`: AdamW with cosine decay, warmup; default `lr=4e-4`, `wd=0.05`, `epochs=12–24`
-- `batch_size`: 8–32 depending on GPU RAM
-
----
 
 ## Evaluation
 ```bash
 python tools/eval.py \
-  --config configs/olnet_culane.yaml \
+  --config configs/olnet_culane.py \
   --checkpoint checkpoints/olnet_culane_f1_81p17.pth \
-  --split test
-```
-Outputs standard CULane metrics and per-scenario breakdown.
 
----
+```
+
 
 
 
@@ -121,7 +101,6 @@ Outputs standard CULane metrics and per-scenario breakdown.
 ## Roadmap
 - [ ] Release checkpoints and occlusion data
 - [ ] Add TensorRT export and INT8 quantization
-- [ ] Add TuSimple/LLAMAS evaluations
 - [ ] Support multilingual logs and docs
 - [ ] Provide Docker image
 
@@ -136,8 +115,6 @@ Outputs standard CULane metrics and per-scenario breakdown.
 
 
 ---
-
-
 
 ## Acknowledgments
 - **CULane** dataset: Pan et al.  
