@@ -1,11 +1,6 @@
 # V-LaneNet
 
 
-# OLNet: A Robust Lane Detection Framework with SLA, MDFPN, and LO-IoU
-
-
-
-
 OLNet achieves an F1 score of **81.17** on **CULane** while running at **71 FPS**, offering a practical solution for robust lane detection in the wild.
 
 
