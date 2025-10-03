@@ -149,6 +149,6 @@ We thank the authors and the open-source community for their contributions.
 ---
 
 ## Contact
-- Maintainer: Your Name (`your.email@domain.com`)
+- Maintainer: luzhaoxuan@smail.fjut.edu.cn
 - Issues and feature requests: please open a GitHub Issue
 
