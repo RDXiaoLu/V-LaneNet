@@ -4,14 +4,7 @@
 V-LaneNet achieves an F1 score of **81.17** on **CULane** while running at **71 FPS**, offering a practical solution for robust lane detection in the wild.
 
 
----
 
-## Highlights
-- **Robust under occlusion & sparse markings** via realistic *Shadow Lane Augmentation (SLA)*
-- **Improved local details + global semantics** with *Multi-Domain FPN* and a *Dual-Domain Fourier Contextual Mixer*
-- **Better geometry and direction inference** using a *Direction-Aware IoU loss (LO-IoU)*
-- **Strong accuracy–speed trade-off**: CULane **F1 = 81.17**, **71 FPS** with frozen backbones and lightweight heads
-- **Modular, easy to integrate** into existing lane detection pipelines
 
 ---
 
