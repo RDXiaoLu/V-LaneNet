@@ -38,8 +38,8 @@ data/
 ```
 - Update `data_root` in `configs/olnet_culane.yaml` accordingly.
 
-### SLA Occlusion Data Generation
-SLA requires SAM and LaMa:
+### V-LaneAug Data Generation
+V-LaneAug requires SAM and LaMa:
 
 - SAM weights and code: https://github.com/facebookresearch/segment-anything  
 - LaMa inpainting: https://github.com/advimman/lama
