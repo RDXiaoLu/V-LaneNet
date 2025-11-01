@@ -59,7 +59,7 @@ We provide a script to generate occlusion/missing-mark variants:
 ## Model Zoo
 | Model | Dataset | F1 | FPS | Checkpoint |
 |------|---------|----|-----|------------|
-| OLNet (V-LaneAug + V-LaneMixer + V-LaneIoU) | CULane | 81.17 | 71 | coming soon |
+| V-LaneNet (V-LaneAug + V-LaneMixer + V-LaneIoU) | CULane | 81.17 | 71 | coming soon |
 
 > We will release more backbones and training recipes.
 
