@@ -64,14 +64,7 @@ We provide a script to generate occlusion/missing-mark variants:
 - [ ] Support multilingual logs and docs
 - [ ] Provide Docker image
 
----
 
-## FAQ
-- **Q: Do I need SLA to train?**  
-  A: Not strictly, but SLA significantly improves robustness under occlusion/missing markings.
-
-- **Q: Is LO-IoU compatible with polyline-based heads?**  
-  A: Yes. Rasterize polylines to thin tubes for IoU, and estimate \(\theta\) from local tangents.
 
 
 ---
